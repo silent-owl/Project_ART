@@ -7,6 +7,9 @@ ruby '2.4.0'
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 
+gem  'pg' ,  '0.20.0'
+gem 'rails_12factor', group: :production
+
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -45,9 +48,6 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-group :production do
-  gem 'pg', '~> 1.0'
-end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
